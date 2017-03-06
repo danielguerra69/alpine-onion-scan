@@ -1,0 +1,24 @@
+Log notice stdout
+ExitPolicy reject *:*
+ORPort 9001
+
+SocksPort 9050
+
+# entry, exit, introduction
+# AllowUnverifiedNodes middle,rendezvous
+
+RunAsDaemon 0
+User tor
+
+DataDirectory /var/lib/tor
+
+
+# enable transparent dns proxy
+VirtualAddrNetwork 10.192.0.0/11
+AutomapHostsOnResolve 1
+
+# public onion dns server
+DNSPort 53
+
+TransPort 9040
+
